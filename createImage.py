@@ -1,32 +1,8 @@
-from tkinter import *
 import os
-from PIL import Image
-import win32api, win32gui
-from time import time
+from PIL import Image, ImageDraw, ImageFont
 
+fnt = ImageFont.truetype('arial.ttf', 15)
 
-#------------find and store the | x,y and widthxheight | of a window---------------------------
-
-save = win32gui.FindWindow(None, "League of Legends (TM) Client") #Finds the window - if it is online
-
-(x, y, width, heigth) = win32gui.GetWindowRect(save) #saves the coordinates
-
-position = (x, y, width, heigth) 
-
-print(position)
-
-#----------------------------------------
-
-root = Tk()
-root.title("Dimi")
-root.iconbitmap() #the icon next to the label/title
-root.geometry(f"{width}x{heigth}+{x-480}+{y+5}") 
-root.wm_attributes('-topmost', 1, '-transparentcolor', '#abcdef') # topmost and the number next to it make sure that the window stays on top of other windows | transparentcolor make the window transparent
-root.attributes("-alpha", 0.8)
-root.config(bg='#abcdef')
-root.overrideredirect(1) #removes the frame of the window, making it headless
-
-#----------------- create a picture --------------------
 
 #-------------BACKROUND-------------------------------
 filename1 = "C:\\Users\\Kas\\Desktop\\League overlay\\Overlay\\Runes\\bg.png"
@@ -63,6 +39,9 @@ shard2 = Image.open(filename9, "r")
 filename10 = "C:\\Users\\Kas\\Desktop\\League overlay\\Overlay\\Runes\\Rune Shards\\Rune_Health.png"
 shard3 = Image.open(filename10, "r")
 
+#-------------Ranked Badge----------------------------
+filename11 = "C:\\Users\\Kas\\Desktop\\League overlay\\Overlay\\RankedEmblems\\Emblem_Gold.png"
+emblem = Image.open(filename11, "r")
 #-------------PASTING OF PICTURES/COLLAGE-------------
 text_img = Image.new('RGBA', (1117,62), (0, 0, 0, 0))
 text_img.paste(bg, (0,0))
@@ -80,25 +59,10 @@ text_img.paste(shard1, (925, 15), mask=shard1 )
 text_img.paste(shard2, (965, 15), mask=shard2 )
 text_img.paste(shard3, (1005, 15), mask=shard3 )
 
+newsize = (90, 90)
+emblem_new = emblem.resize(newsize)
+text_img.paste(emblem_new, (0,-15), mask=emblem_new )
 
 
 
 text_img.save("C:\\Users\\Kas\\Desktop\\League overlay\\Overlay\\Runes\\output.png", format="png")
-
-#-------------------------------------------------------
-
-#-------- take that picture and project it onto the transparent and headless window
-
-
-t_img = PhotoImage(file="C:\\Users\\Kas\\Desktop\\League overlay\\Overlay\\Runes\\output.png")
-
-myimage = Label(image=t_img)
-myimage.pack()
-
-start = time()
-
-root.after(7000, root.destroy)
-
-root.mainloop()
-
- 
