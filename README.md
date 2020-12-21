@@ -36,4 +36,3 @@ Additional programs that got uploaded to this repository:
 
 - resize images.py ( Resized all the given icons, that got used to generate the picture, into the same size )
 - findWindow.py ( Test run of the program, a windows coordinates, to fixate on it and size itself accordingly )
-- 
