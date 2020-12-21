@@ -31,8 +31,10 @@ The Pictures that are being used are saved into folder, which the program has ac
 **[Video](https://youtu.be/XzXLDRQI-bQ)** example of the program running
 
 ---
-Additional programs that got uploaded to this repository: 
+Additional programs and Folder that got uploaded to this repository: 
 
+- Folder with all the images needed 
 
 - resize images.py ( Resized all the given icons, that got used to generate the picture, into the same size )
 - findWindow.py ( Test run of the program, a windows coordinates, to fixate on it and size itself accordingly )
+- createImage.py ( Generates an image, from multiple images, after getting the paths fed into it )
