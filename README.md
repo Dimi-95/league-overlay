@@ -1,7 +1,7 @@
 # League Overlay
 
 ---
-Modules used: tkinter, os, PIL, win32api, time, urllib.request, sll, json, riotwatcher
+Modules used: tkinter, os, PIL, win32api, time, urllib.request, ssl, json, riotwatcher
 ---
 
 A Program that locates the "League of Legends (TM) Client", which is the ongoing game.
