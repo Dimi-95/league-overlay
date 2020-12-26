@@ -4,6 +4,8 @@
 Modules used: tkinter, os, PIL, win32api, time, urllib.request, ssl, json, riotwatcher
 ---
 
+[Paths are all relative to my personal PC]
+
 A Program that locates the "League of Legends (TM) Client", which is the ongoing game.
 
 After doing so, it fixates a window onto it, by using the location that is being taken through the "win32api" module.
