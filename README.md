@@ -28,7 +28,7 @@ only the generated image, while being headless ( no cancel or minimize to tray b
 
 The program runs on a timer, closing after 7 seconds.
 
-The Pictures that are being used are saved into folder, which the program has access to. The Background itself is a stylized pre-existing template. 
+The Pictures that are being used are saved into folders, which the program has access to. The Background itself is a stylized pre-existing template. 
 
 **[Video](https://youtu.be/XzXLDRQI-bQ)** example of the program running
 
