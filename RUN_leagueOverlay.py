@@ -8,10 +8,10 @@ import ssl
 import json
 from riotwatcher import LolWatcher, ApiError
 
-ssl._create_default_https_context = ssl._create_unverified_context
+ssl._create_default_https_context = ssl._create_unverified_context #bypassing http request error
 api_key = [API KEY FROM RIOT]
 watcher = LolWatcher(api_key)
-my_region = "euw1"
+my_region = "euw1" #choosing server 
 fnt = ImageFont.truetype('C:\\Users\\Kas\\Desktop\\League overlay\\Overlay\\fonts\\Friz Quadrata Regular.ttf', 22)
 
 
